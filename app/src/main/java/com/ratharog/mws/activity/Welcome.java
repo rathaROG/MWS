@@ -17,4 +17,6 @@ public class Welcome extends Activity {
 
         setContentView(R.layout.welcome);
     }
+
+
 }

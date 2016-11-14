@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/welcome"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@android:color/holo_blue_dark">
@@ -24,20 +25,21 @@
         android:layout_marginStart="50dp"
         android:id="@+id/textViewUsername"
         android:textColor="@android:color/background_light"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:textSize="18sp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:inputType="textPersonName"
-        android:text="username"
         android:ems="10"
         android:layout_below="@+id/textViewTitle"
         android:layout_alignStart="@+id/textViewUsername"
         android:layout_marginEnd="50dp"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/editTextUsername" />
+        android:id="@+id/editTextUsername"
+        android:hint="username" />
 
     <TextView
         android:text="Password:"
@@ -48,20 +50,22 @@
         android:layout_marginTop="20dp"
         android:id="@+id/textViewPassword"
         android:textColor="@android:color/background_light"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:textSize="18sp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:inputType="textPassword"
-        android:text="password"
         android:ems="10"
         android:layout_below="@+id/textViewPassword"
         android:layout_alignStart="@+id/textViewUsername"
         android:layout_alignEnd="@+id/editTextUsername"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/editTextPassword" />
+        android:id="@+id/editTextPassword"
+        android:textSize="14sp"
+        android:hint="password" />
 
     <Button
         android:text="Login"
@@ -81,6 +85,7 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@+id/buttonLogin"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/buttonForgotPassword"
         style="@style/Widget.AppCompat.Button"
