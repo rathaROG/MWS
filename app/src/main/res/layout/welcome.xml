@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark">
+
+    <TextView
+        android:text="Crop Monitering and Watering System"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textViewTitle"
+        android:textSize="38sp"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold" />
+    <TextView
+        android:text="Username:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewTitle"
+        android:layout_marginStart="50dp"
+        android:id="@+id/textViewUsername"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:text="username"
+        android:ems="10"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_alignStart="@+id/textViewUsername"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editTextUsername" />
+
+    <TextView
+        android:text="Password:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextUsername"
+        android:layout_alignStart="@+id/editTextUsername"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textViewPassword"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:text="password"
+        android:ems="10"
+        android:layout_below="@+id/textViewPassword"
+        android:layout_alignStart="@+id/textViewUsername"
+        android:layout_alignEnd="@+id/editTextUsername"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editTextPassword" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:id="@+id/buttonLogin"
+        style="@style/Widget.AppCompat.Button"
+        android:backgroundTint="@color/limegreen"
+        android:textColor="@color/white"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text="Forgot My Account"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/buttonLogin"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/buttonForgotPassword"
+        style="@style/Widget.AppCompat.Button"
+        android:backgroundTint="@color/whitesmoke"
+        android:textColor="@color/gray" />
+
+
+</RelativeLayout>
