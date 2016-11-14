@@ -85,6 +85,5 @@
         android:id="@+id/button2"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/textView13" />
-    
 </RelativeLayout>
 
