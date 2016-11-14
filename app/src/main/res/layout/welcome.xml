@@ -39,7 +39,8 @@
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/editTextUsername"
-        android:hint="username" />
+        android:hint="username"
+        android:textSize="14sp" />
 
     <TextView
         android:text="Password:"
@@ -78,7 +79,8 @@
         style="@style/Widget.AppCompat.Button"
         android:backgroundTint="@color/limegreen"
         android:textColor="@color/white"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:textSize="18sp" />
 
     <Button
         android:text="Forgot My Account"
