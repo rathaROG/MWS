@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ViewFlipper;
 
 import com.ratharog.mws.R;
 
@@ -85,11 +86,13 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        ViewFlipper vf = (ViewFlipper)findViewById(R.id.vf);
 
-        if (id == R.id.home) {
+        if (id == R.id.nav_home) {
             // Handle the camera action
+            vf.setDisplayedChild(0);
         } else if (id == R.id.nav_contact) {
-
+            vf.setDisplayedChild(1);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

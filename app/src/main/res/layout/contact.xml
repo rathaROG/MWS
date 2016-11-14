@@ -1,80 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
-    
+
     <TextView
-        android:text="Contact Us :"
+        android:text="If you have any problem, we are ready and very happy to help you. Please contact us by the following phone numbers or emails. Thank you!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:id="@+id/textView3"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/textViewIntroduction" />
+
+    <TextView
+        android:text="Phone number:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewIntroduction"
+        android:layout_alignStart="@id/textViewIntroduction"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textViewPhoneNumber"
         android:textSize="18sp" />
 
     <TextView
-        android:text="Phone Number :"
+        android:text="xxxx-xxxx-xxxx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPhoneNumber"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewPhoneNumber1"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="xxxx-xxxx-xxxx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewPhoneNumber1"
+        android:layout_below="@+id/textViewPhoneNumber1"
+        android:id="@+id/textViewPhoneNumber2"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Email address:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPhoneNumber2"
+        android:layout_alignStart="@+id/textViewPhoneNumber"
         android:layout_marginTop="30dp"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
-
-    <TextView
-        android:text="xxxx-xxxx-xxxx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView4"
-        android:layout_toEndOf="@+id/textView4"
-        android:layout_marginStart="18dp"
-        android:id="@+id/textView5" />
-
-    <TextView
-        android:text="xxxx-xxxx-xxxx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/textView5"
-        android:id="@+id/textView6" />
-
-    <TextView
-        android:text="Email Address :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
-        android:layout_alignStart="@+id/textView4"
-        android:layout_marginTop="27dp"
-        android:id="@+id/textView7" />
+        android:id="@+id/textViewEmail"
+        android:textSize="18sp" />
 
     <TextView
         android:text="xxxx@mail.cmws.com"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView7"
-        android:layout_alignStart="@+id/textView6"
-        android:id="@+id/textView8" />
-
-    <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginBottom="77dp"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/textView6" />
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewEmail"
+        android:id="@+id/textViewEmailAddress"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
 
     <TextView
-        android:text="Crop Monitoring and Watering System"
+        android:text="xxxx@mail.cmws.com"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:id="@+id/textView"
-        android:textAppearance="@android:style/TextAppearance.Material.Small"
-        android:textSize="38sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewEmailAddress"
+        android:id="@+id/textViewEmailAddress2"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
 
 </RelativeLayout>
