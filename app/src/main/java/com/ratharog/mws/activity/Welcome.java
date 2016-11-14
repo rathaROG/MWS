@@ -1,10 +1,13 @@
 package com.ratharog.mws.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import com.ratharog.mws.R;
 
@@ -13,6 +16,8 @@ import com.ratharog.mws.R;
  */
 
 public class Welcome extends Activity {
+
+    private Button loginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,18 @@ public class Welcome extends Activity {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(0xFF33B5E5);
         }
+
+
+        loginButton = (Button) findViewById(R.id.buttonLogin);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Welcome.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
 }
