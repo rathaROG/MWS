@@ -1,9 +1,12 @@
 package com.ratharog.mws.activity;
 
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -57,16 +60,16 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void loadGridView() {
-        GridView gridview = (GridView) findViewById(R.id.gridView);
-        gridview.setAdapter(new ImageAdapter(this));
+        GridView gridView = (GridView) findViewById(R.id.gridView);
+        gridView.setAdapter(new ImageAdapter(this));
 
-        /*gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 Toast.makeText(MainActivity.this, "" + position,
                         Toast.LENGTH_SHORT).show();
             }
-        });*/
+        });
     }
 
     @Override
@@ -83,6 +86,12 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
+        SharedPreferences settings = getSharedPreferences("settings", 0);
+        boolean isChecked = settings.getBoolean("checkbox", false);
+        MenuItem item = menu.findItem(R.id.action_remember_me);
+        item.setChecked(isChecked);
+
         return true;
     }
 
@@ -94,7 +103,30 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_sign_out) {
+
+
+            new AlertDialog.Builder(this)
+                    .setTitle("Log out and Exit")
+                    .setMessage("Do you want to log out and exit?")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            System.exit(0);
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, null).show();
+
+            return true;
+        }
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_remember_me) {
+            item.setChecked(!item.isChecked());
+            SharedPreferences settings = getSharedPreferences("settings", 0);
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean("checkbox", item.isChecked());
+            editor.commit();
             return true;
         }
 
@@ -106,7 +138,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        ViewFlipper vf = (ViewFlipper)findViewById(R.id.vf);
+        ViewFlipper vf = (ViewFlipper) findViewById(R.id.vf);
 
         if (id == R.id.nav_home) {
             // Handle the camera action
