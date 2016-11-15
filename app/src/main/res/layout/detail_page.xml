@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/detail_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="55dp"
+        android:id="@+id/RelativeLayoutCover">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:srcCompat="@drawable/field_photo_01"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            android:id="@+id/imageViewFieldPhoto" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            style="@style/Widget.AppCompat.Button"
+            android:backgroundTint="@color/darkcyan"
+            android:text="Report"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:text="Field: XXXX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RelativeLayoutCover"
+        android:layout_margin="10dp"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:id="@+id/textViewFieldName"/>
+
+    <TextView
+        android:text="Moisture: 22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFieldName"
+        android:layout_marginLeft="25dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:id="@+id/textViewMoistureLevel"/>
+
+    <TextView
+        android:text="Temperature: 28ºC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewMoistureLevel"
+        android:layout_alignStart="@id/textViewMoistureLevel"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:id="@+id/textViewTempLevel"/>
+
+    <Button
+        android:text="Water now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RelativeLayoutCover"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        style="@style/Widget.AppCompat.Button"
+        android:backgroundTint="@color/orange"
+        android:id="@+id/buttonWaterNow"/>
+
+    <TextView
+        android:text="Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTempLevel"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignLeft="@id/textViewFieldName"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:id="@+id/textViewSettings"/>
+
+    <TextView
+        android:text="Max moisture:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSettings"
+        android:layout_alignStart="@id/textViewMoistureLevel"
+        android:layout_marginTop="10dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:id="@+id/textViewMaxMoistureLevel"/>
+
+
+    <TextView
+        android:text="Min moisture:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewMaxMoistureLevel"
+        android:layout_alignStart="@id/textViewMoistureLevel"
+        android:layout_marginTop="20dp"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:id="@+id/textViewMinMoistureLevel"/>
+
+    <CheckBox
+        android:text="Alert if moisture level is out of rank."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMinMoistureLevel"
+        android:layout_alignStart="@+id/textViewMoistureLevel"
+        android:layout_marginTop="20dp"
+        android:id="@+id/checkBoxAlert" />
+
+    <CheckBox
+        android:text="Exclude this field from AUTOPILOT mode."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxAlert"
+        android:layout_alignStart="@+id/textViewMoistureLevel"
+        android:layout_marginTop="10dp"
+        android:id="@+id/checkBoxExcludeAutopilot" />
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewMaxMoistureLevel"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:id="@+id/spinnerMaxMoistureLevel" />
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewMinMoistureLevel"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:id="@+id/spinnerMixMoistureLevel" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        style="@style/Widget.AppCompat.Button"
+        android:backgroundTint="@color/darkcyan"
+        android:id="@+id/buttonBack"/>
+
+</RelativeLayout>

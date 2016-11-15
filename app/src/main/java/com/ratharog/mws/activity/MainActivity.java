@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -68,6 +69,9 @@ public class MainActivity extends AppCompatActivity
                                     int position, long id) {
                 Toast.makeText(MainActivity.this, "" + position,
                         Toast.LENGTH_SHORT).show();
+
+                ViewFlipper vf = (ViewFlipper) findViewById(R.id.vf);
+                vf.setDisplayedChild(2);
             }
         });
     }

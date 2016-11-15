@@ -50,6 +50,7 @@
 
         <include android:id="@+id/layout_home" layout="@layout/content_main" />
         <include android:id="@+id/layout_contact" layout="@layout/contact" />
+        <include android:id="@+id/layout_detail_page" layout="@layout/detail_page" />
 
     </ViewFlipper>
 
